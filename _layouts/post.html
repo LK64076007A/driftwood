@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<header class="masthead">        
+  <h1 class="masthead-title">
+    <a href="{{ site.baseurl }}/">{{ site.title }}<span> podcast</span></a>
+  </h1>
+  <nav class="masthead-nav">
+    {% for nav in site.nav %}
+    <a href="{{ nav.href }}">{{ nav.name }}</a>
+    {% endfor %}
+  </nav>
+</header>   
+<div class="content post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-date">
+    <time>{{ page.date | date_to_string }}</time>
+  </div>
+  {{ content }}
+</div>
